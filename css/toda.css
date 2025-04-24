@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway";
+  color: #030f00;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo,
+.about,
+.project,
+.contact {
+  color: #030f00;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.8em;
+}
+
+.headerBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro {
+  margin: 20px 100px;
+  display: flex;
+  flex-direction: row;
+}
+.todaTitle {
+  color: #ffc445;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0;
+}
+
+.todaInfo{
+margin-bottom: 200px;
+}
+
+.infoBottom{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.bottomtitle{
+    font-weight: bold;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #ffc445;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0;
+}
+
+.assignment{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 150px 100px;
+    
+}
+
+.assTitle{
+    font-size: 2.5em;
+    margin-top: 0px;
+}
+
+.assText{
+    max-width: 450px;
+}
+
+.infoContact {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.video img {
+  width: 300px;
+  height: 620px;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.nmbr {
+  text-decoration: none;
+  color: #030f00;
+  margin: 0px;
+}
+
+.or {
+  margin: 40px;
+}
+.linkedIn,
+.insta {
+  text-decoration: none;
+  color: #030f00;
+}

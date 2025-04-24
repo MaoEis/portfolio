@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IamMai</title>
+    <meta property="og:title" content="MaiEisenberg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+    <meta
+      property="og:image"
+      content="https://ia.media-imdb.com/images/rock.jpg"
+    />
+    <link rel="icon" type="image/x-icon" href="/asset/ME.png" />
+    <link rel="stylesheet" href="css/normalise.css" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400, 500, 600, 700,900"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <video autoplay muted loop playsinline id="introVideo">
+        <source src="../asset/small.mp4" type="video/mp4" />
+      </video>
+
+      <header>
+        <div>
+          <a class="logo" href="#">Mai Eisenberg</a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="navMobile" id="navMobile">
+          <a class="project" href="#todaDiv">Projects</a>
+          <a class="about" href="#aboutMe">About</a>
+          <a class="contact" href="#contactSection">Contact</a>
+        </nav>
+
+        <nav class="navDesk" id="navDesk">
+          <a class="projectDesk" href="#BigtodaDiv">Projects</a>
+          <a class="aboutDesk" href="#aboutMe">About</a>
+          <a class="contactDesk" href="#contactSection">Contact</a>
+        </nav>
+      </header>
+
+      <span id="scrollDown">Scroll down</span>
+    </main>
+
+    <section class="projectsSection" id="todaDiv">
+      <h2 class="projectsTitle">Projects</h2>
+      <div class="todaDiv">
+        <a class="projectToda" href="../toda.html">
+          <div class="tittleToda">
+            <img src="../asset/TodaLogo.png" alt="" />
+          </div>
+        </a>
+        <a class="projectTodaInfo" href="../toda.html">
+          <h1 class="projectTodaTittle">Toda - Sustainable clothes borrow</h1>
+          <p class="projectTodaSubTittle">
+            Creation, Design & Development (HTML, CSS & Javascript).
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section class="aboutSection" id="aboutMe">
+      <div class="aboutMe">
+        <div class="picOfMe">
+          <img src="/asset/Mai.png" alt="picOfMe" />
+        </div>
+        <div>
+          <h2 class="titleAbout">About me</h2>
+          <p class="textAbout">
+            I started my journey studying social work, drawn by my love for
+            psychology and philosophy. After a few years of traveling and
+            working as a social worker, I learned a lot about myself and others,
+            but realised my passion was in creativity and design. <br /><br />
+            In my Digital Experience Design studies, I’ve gained skills in tools
+            like Adobe Suite and Figma, along with experience in design
+            thinking, branding, and development.<br /><br />
+            I thrive on learning new tools, exploring innovative ideas, and
+            finding simple, effective solutions. Collaboration is where I
+            shine—working together to exchange thoughts and analyse challenges
+            is what drives me forward.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contactSection">
+      <h2 class="contactTitle">Let's connect!</h1>
+      <h3>
+        <a class="mail" href="mailto:mai.eisenberg@gmail.com"
+          >mai.eisenberg@gmail.com</a
+        >
+      </h3>
+      <div class="contactInfo">
+        <p class="or">Or</p>
+        <p class="nmbr">+32 4777 18814</p>
+        <a class="linkedIn" href="https://www.linkedin.com/in/mai-eisenberg-032519235/">LinkedIn /mai-eisenberg</a>
+      </div>
+        <div class="infoContact">
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMobile = document.getElementById("navMobile");
+
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        navMobile.classList.toggle("show");
+      });
+
+      const bgVideo = document.getElementById("introVideo");
+      bgVideo.addEventListener("ended", function () {
+        bgVideo.currentTime = 0; // Reset the video to the start
+        bgVideo.play(); // Play the video again
+      });
+
+      const todaDiv = document.querySelector(".todaDiv");
+      const videoToda = document.getElementById("videoToda");
+
+      // Play video on hover
+      todaDiv.addEventListener("mouseenter", () => {
+        videoToda.play();
+      });
+
+      // Pause video when mouse leaves
+      todaDiv.addEventListener("mouseleave", () => {
+        videoToda.pause();
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Selecting the links
+        const aboutLink = document.querySelector(".about");
+        const aboutDeskLink = document.querySelector(".aboutDesk");
+        const projectLink = document.querySelector(".project");
+        const projectDeskLink = document.querySelector(".projectDesk");
+        const contactLink = document.querySelector(".contact");
+        const contactDeskLink = document.querySelector(".contactDesk");
+
+        // Selecting the sections
+        const aboutSection = document.querySelector("#aboutMe");
+        const projectSection = document.querySelector("#todaDiv");
+        const contactSection = document.querySelector("#contactSection");
+
+        function hideMenu() {
+          navMobile.classList.remove("show");
+          hamburger.classList.remove("active");
+        }
+        // Event listeners for smooth scrolling to sections
+        aboutLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+          hideMenu();
+        });
+
+        aboutDeskLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+        projectLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          projectSection.scrollIntoView({ behavior: "smooth" });
+          hideMenu();
+        });
+
+        projectDeskLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          projectSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+        contactLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          contactSection.scrollIntoView({ behavior: "smooth" });
+          hideMenu();
+        });
+
+        contactDeskLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
