@@ -1,3 +1,9 @@
+:root {
+  --yel: #ffc445;
+  --pink: #fd06ab;
+  --fontcol: #fd06ab;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -60,7 +66,7 @@ header {
 }
 
 .logo {
-  color: #ffc445;
+  color: var(--fontcol);
   text-decoration: none;
   font-weight: 500;
   font-size: 1em;
@@ -87,38 +93,40 @@ header {
 }
 
 .hamburger {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 30px;
-  z-index: 1100;
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: rgba(0, 0, 0, 0.4);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 5px;
+  z-index: 1100;
+  background-color: none;
   border-radius: 2px;
 }
 
 .hamburger span {
-  display: block;
-  width: 100%;
-  height: 2.5px;
+  height: 3px;
+  background-color: var(--fontcol);
   border-radius: 2px;
-  background-color: #ffc445;
   transition: 0.5s ease-in-out;
 }
 
+.hamburger.active {
+  justify-content: center;
+}
+
 .hamburger.active span {
+  position: absolute;
+  width: 70%;
   height: 4px;
   background-color: #030f00;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-  /* transform: #030f00; */
+  transform: rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -126,8 +134,7 @@ header {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-  /* color: #030f00; */
+  transform: rotate(-45deg);
 }
 
 .navMobile.show {
@@ -270,17 +277,6 @@ section {
   margin: auto;
 }
 
-/* .textAbout {
-  background-image: url("../asset/Mai.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  opacity: 0.2;
-  height: 100%;
-  padding: 20px;
-  width: 100%;
-} */
-
 .aboutSection {
   padding: 0px 20px 100px 20px;
   gap: 20px;
@@ -294,21 +290,6 @@ section {
   font-size: 1em;
 }
 
-/* .textAbout::before {
-  content: "";
-  background-image: url("../asset/Mai.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  opacity: 0.2; /* Lower opacity for the background image 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-} */
-
 .textAbout > * {
   position: relative;
   z-index: 2; /* Full opacity text over the background image */
@@ -318,7 +299,7 @@ section {
   text-decoration: none;
   display: flex;
   justify-content: center;
-  color: #ffc445;
+  color: var(--fontcol);
   font-weight: 900;
   font-size: 7vw;
   padding-top: 0px;
@@ -351,48 +332,76 @@ a[href^="tel"] {
   color: white;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 900px) {
+  body {
+    padding: 20px 40px;
+  }
+
   .hamburger {
     display: none;
   }
 
   .navDesk {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 50px;
   }
 
   .logo,
   .aboutDesk,
   .projectDesk,
-  .contactDesk {
+  .contactDesk,
+  #scrollDown {
     text-decoration: none;
-    color: #ffc445;
+    color: var(--fontcol);
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 1.7em;
   }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  #scrollDown {
+    top: -250px;
   }
 
   .projectsTitle,
   .titleAbout,
   .contactTitle {
-    font-size: 2.5em;
+    font-size: 13em;
     margin: 40px 20px;
   }
 
-  #scrollDown {
-    top: -150px;
+  .MaiForPortfolioMobile {
+    display: none;
   }
 
-  .mail {
-    font-size: 1em;
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 99%;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
   }
+
+  .projectContainer,
+  .swearDiv {
+    max-width: 100%;
+    gap: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  .tittleToda {
+    max-width: 100%;
+  }
+  .tittleToda img {
+    max-width: 100%;
+  }
+  .projectTodaTittle {
+    font-size: 3em;
+    color: var(--fontcol);
+  }
+
+  /* 
 
   .infoContact {
     display: flex;
@@ -435,8 +444,7 @@ a[href^="tel"] {
 
   .todaContainerBtn {
     display: flex;
-    justify-content: flex-end; /* This pushes the button to the right */
-    margin: 20px;
+    justify-content: flex-end; /* This pushes the button to the right
   }
 
   /* .todaBtn {
@@ -456,7 +464,7 @@ a[href^="tel"] {
     color: #ebbb2a;
     padding: 13px 26px;
     border-color: #ebbb2a;
-  } */
+  } 
   .projectToda {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -507,12 +515,12 @@ a[href^="tel"] {
 
   #videoToda {
     width: 100%;
-    height: 100%; /* Make the video take up the full height of the container */
+    height: 100%; /* Make the video take up the full height of the container
     border-radius: 60px;
     margin: 0;
     padding: 10px;
 
-    object-fit: cover; /* Ensures the video covers the container without cutting */
+    object-fit: cover; /* Ensures the video covers the container without cutting
   }
 
   .todaDiv:hover #videoToda {
@@ -556,4 +564,5 @@ a[href^="tel"] {
   .textAbout::before {
     background-image: none;
   }
+} */
 }
