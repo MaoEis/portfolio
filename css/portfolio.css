@@ -356,6 +356,22 @@ a[href^="tel"] {
     color: var(--fontcol);
     font-weight: 500;
     font-size: 1.7em;
+    transition: size 0.3s ease;
+  }
+  .logo:hover,
+  .aboutDesk:hover,
+  .projectDesk:hover,
+  .contactDesk:hover {
+    size: font-weight(700);
+  }
+  .tittleToda img {
+    max-width: 100%;
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+  }
+
+  .tittleToda:hover img {
+    filter: brightness(100%);
   }
 
   #scrollDown {
@@ -395,174 +411,65 @@ a[href^="tel"] {
   }
   .tittleToda img {
     max-width: 100%;
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+  }
+
+  .tittleToda:hover img {
+    filter: brightness(100%);
   }
   .projectTodaTittle {
     font-size: 3em;
     color: var(--fontcol);
-  }
-
-  /* 
-
-  .infoContact {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .nmbr {
-    text-decoration: none;
-    color: #030f00;
-    margin: 0px;
-  }
-
-  .or {
-    margin: 40px;
-  }
-  .linkedIn,
-  .insta {
-    text-decoration: none;
-    color: #030f00;
-  }
-}
-
-@media (min-width: 1000px) {
-  .todaDiv {
-    position: relative;
-    background-color: #373737;
-    height: 500px;
-    margin: 20px 20px;
-    max-width: 100%;
-    padding: 20px;
-    gap: 60px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  }
-
-  .todaContainerBtn {
-    display: flex;
-    justify-content: flex-end; /* This pushes the button to the right
-  }
-
-  /* .todaBtn {
-    text-decoration: none;
-    color: #030f00;
-    font-weight: 600;
-    border: 3px solid;
-    border-radius: 10px;
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    transition: all 0.3s ease;
-    position: static;
-  }
-
-  .todaBtn:hover {
-    color: #ebbb2a;
-    padding: 13px 26px;
-    border-color: #ebbb2a;
-  } 
-  .projectToda {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  #introVideo {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    width: 110%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  .todaDiv:hover {
-    transform: scale(1.1);
-  }
-
-  .tittleToda {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    justify-self: center;
-    align-self: end;
-    padding-bottom: 100px;
-    text-align: center;
     padding-top: 100px;
   }
 
-  .tittleToda img {
-    padding: 40px 0px;
-    max-width: 450px;
-  }
-
-  .videoContainer {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    justify-self: start;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 150px;
-    left: -40px;
-  }
-
-  #videoToda {
-    width: 100%;
-    height: 100%; /* Make the video take up the full height of the container
-    border-radius: 60px;
-    margin: 0;
-    padding: 10px;
-
-    object-fit: cover; /* Ensures the video covers the container without cutting
-  }
-
-  .todaDiv:hover #videoToda {
-    transform: scale(1);
-  }
-
-  .arrowLeft,
-  .arrowRight {
-    display: none;
-  }
-
-  .projectsTitle {
-    padding-top: 100px;
-  }
-
-  .mail {
-    font-size: 2.3em;
+  .projectTodaSubTittle {
+    font-size: 2em;
+    color: var(--fontcol);
   }
 
   .aboutMe {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    padding: 150px 0px;
-    margin: 0px 20px;
+    gap: 20px;
+    padding: 0px 20px 100px 20px;
+    height: auto;
+    margin-bottom: 0px;
   }
 
   .picOfMe img {
     display: block;
     width: 100%;
-  }
-
-  .titleAbout {
-    font-size: 2.5em;
+    height: auto;
+    margin: auto;
   }
 
   .textAbout {
-    width: 75%;
+    font-size: 1.7em;
+    padding: 0px 20px 100px 20px;
+    gap: 20px;
+    height: auto;
+    width: 70%;
+    margin-bottom: 0px;
   }
 
-  .textAbout::before {
-    background-image: none;
+  .contactInfo {
+    font-size: 2em;
+    padding: 0px 20px 100px 20px;
+    gap: 20px;
+    height: auto;
+    margin-bottom: 0px;
   }
-} */
+
+  .contactTitle {
+    font-size: 10em;
+  }
+  .nmbr,
+  .linkedIn {
+    font-weight: 600;
+  }
 }
