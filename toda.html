@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IamMai</title>
     <link rel="stylesheet" href="css/normalise.css" />
-    <link rel="stylesheet" href="./css/toda.css" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:400,500, 600, 700,900"
       rel="stylesheet"
@@ -13,21 +13,33 @@
   </head>
   <body>
     <main>
-      <header>
-        <div>
-          <a class="logo" href="./index.html">Mai Eisenberg</a>
+      <header class="headerProjects">
+        <div class="logoContainer">
+          <a class="logo" href="../index.html">Mai Eisenberg</a>
         </div>
+
         <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <nav class="headerBtns" id="headerBtns">
-            <a class="about" href="">About</a>
-            <a class="project" href="./toda.html">Mai projects</a>
-            <a class="contact" href="">Contact</a>
+
+        <nav class="navMobile" id="navMobile">
+          <a class="project" href="#todaDiv">Projects</a>
+          <a class="about" href="#aboutMe">About</a>
+          <a class="contact" href="#contactSection">Contact</a>
+        </nav>
+
+        <nav class="navDesk" id="navDesk">
+          <a class="projectDesk" href="#BigtodaDiv">Projects</a>
+          <a class="aboutDesk" href="#aboutMe">About</a>
+          <a class="contactDesk" href="#contactSection">Contact</a>
         </nav>
       </header>
+      <h3 class="prPageTitle">Mobile App for sustainable clothes sharing.</h3>
+      <video autoplay muted loop playsinline id="todaVideo">
+        <source src="../asset/TodAscherm.mov" type="video/mp4" />
+      </video>
     </main>
     <div class="intro">
       <div class="infoAll">
