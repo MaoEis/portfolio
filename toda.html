@@ -37,10 +37,49 @@
         </nav>
       </header>
       <h3 class="prPageTitle">Mobile App for sustainable clothes sharing.</h3>
-      <video autoplay muted loop playsinline id="todaVideo">
+      <video autoplay muted loop playsinline id="prPageTitle">
         <source src="../asset/TodAscherm.mov" type="video/mp4" />
       </video>
     </main>
+    <section class="projectContainerOne">
+      <h1 class="summaryTitle">Summary</h1>
+      <div class="sumContainer">
+        <div class="briefSolContainer">
+          <div class="briefContainer">
+            <h1 class="briefTitle">Project Brief</h1>
+            <p class="briefText">
+              This individual assignment, issued by Thomas More, challenged us to create a digital solution that promotes sustainability within the fashion industry. The project required in-depth research on sustainable fashion practices, the development of a concept based on our findings, and the design and implementation of a functional application. We were asked to build at least five screens, visually present the concept through pitch materials and pamphlets, and convincingly communicate its value through a short verbal pitch.
+          </div>
+          <div class="solutionContainer">
+            <h1 class="solutionTitle">Solution</h1>
+            <p class="solutionText">
+              Toda is a peer-to-peer clothing exchange app designed to make sustainable fashion easy and social. Instead of buying new outfits for every special occasion, users can share pieces from their existing wardrobe with friends, keeping their style fresh without contributing to overconsumption. The platform encourages a more mindful approach to fashion by reducing waste, extending the life cycle of clothing, and making it easier to access variety without constant purchasing. Through intuitive design and a community-driven model, Toda supports a shift toward more responsible and conscious fashion habits.
+            </p>
+          </div>
+        </div>
+        <div class="SkillContainer">
+          <h1 class="skillTitle">Skillset</h1>
+          <div class="skillText">
+            <ul>
+            <li>User research</li>
+            <li>Design thinking</li>
+            <li>Branding</li>
+            <li>Responsive design principles</li>
+            <li>Wireframing and prototyping (using Figma)</li>
+            <li>Front-end development - HTML, CSS, JavaScript</li>
+            <li>Visual storytelling</li>
+            </ul>
+          </div>
+      </div>
+    </section>
+    <section class="visBoardScreens">
+        <div class="visBoardImage">
+          <img src="./asset/TI1.png" alt="screenOne" />
+          <img src="./asset/TI2.png" alt="screenTwo" />
+          <img src="./asset/TI3.png" alt="screenThree" />
+        </div>
+      </div>
+    </section>
     <div class="intro">
       <div class="infoAll">
         <div class="infoTop">
@@ -74,15 +113,15 @@
         </div>
       </div>
 
-      <div class="video">
+      <!-- <div class="video">
         <img src="./asset/Screenshot 2024-09-24 at 11.33.29.png" alt="" />
       </div>
-    </div>
+    </div> -->
 
     <div class="assignment">
-      <div class="scrollimage">
+      <!-- <div class="scrollimage">
         <img src="./asset/branding.png" alt="branding" />
-      </div>
+      </div> -->
       <div class="assInfo">
         <h2 class="assTitle">Assignment</h2>
         <p class="assText">
@@ -98,14 +137,89 @@
       </div>
     </div>
 
-    <footer>
-      <h1>mai.eisenberg@gmail.com</h1>
-      <p class="or">Or</p>
-      <div class="infoContact">
+   <footer id="contactSection">
+      <h2 class="contactTitle">Let's connect</h1>
+      <h3>
+        <a class="mail" href="mailto:mai.eisenberg@gmail.com"
+          >mai.eisenberg@gmail.com</a
+        >
+      </h3>
+      <div class="contactInfo">
+        <p class="or">Or</p>
         <p class="nmbr">+32 4777 18814</p>
-        <a class="linkedIn" href="">LinkedIn</a>
-        <a class="insta" href="">Instagram</a>
+        <a class="linkedIn" href="https://www.linkedin.com/in/mai-eisenberg-032519235/">LinkedIn /mai-eisenberg</a>
+      </div>
+        <div class="infoContact">
       </div>
     </footer>
+     <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMobile = document.getElementById("navMobile");
+
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        navMobile.classList.toggle("show");
+      });
+
+      const bgVideo = document.getElementById("introVideo");
+      bgVideo.addEventListener("ended", function () {
+        bgVideo.currentTime = 0; // Reset the video to the start
+        bgVideo.play(); // Play the video again
+      });
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Selecting the links
+        const aboutLink = document.querySelector(".about");
+        const aboutDeskLink = document.querySelector(".aboutDesk");
+        const projectLink = document.querySelector(".project");
+        const projectDeskLink = document.querySelector(".projectDesk");
+        const contactLink = document.querySelector(".contact");
+        const contactDeskLink = document.querySelector(".contactDesk");
+
+        // Selecting the sections
+        const aboutSection = document.querySelector("#aboutMe");
+        const projectSection = document.querySelector("#todaDiv");
+        const contactSection = document.querySelector("#contactSection");
+
+        function hideMenu() {
+          navMobile.classList.remove("show");
+          hamburger.classList.remove("active");
+        }
+        // Event listeners for smooth scrolling to sections
+        aboutLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+          hideMenu();
+        });
+
+        aboutDeskLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+        projectLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          projectSection.scrollIntoView({ behavior: "smooth" });
+          hideMenu();
+        });
+
+        projectDeskLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          projectSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+        contactLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          contactSection.scrollIntoView({ behavior: "smooth" });
+          hideMenu();
+        });
+
+        contactDeskLink.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
   </body>
 </html>
