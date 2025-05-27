@@ -12,8 +12,8 @@
     />
   </head>
   <body>
-    <main>
-      <header class="headerProjects">
+    <main class="mainToda">
+      <header class="headerProjectsToda">
         <div class="logoContainer">
           <a class="logo" href="../index.html">Mai Eisenberg</a>
         </div>
@@ -72,70 +72,20 @@
           </div>
       </div>
     </section>
-    <section class="visBoardScreens">
+    <section class="visBoardScreensDesk">
         <div class="visBoardImage">
           <img src="./asset/TI1.png" alt="screenOne" />
           <img src="./asset/TI2.png" alt="screenTwo" />
           <img src="./asset/TI3.png" alt="screenThree" />
         </div>
-      </div>
     </section>
-    <div class="intro">
-      <div class="infoAll">
-        <div class="infoTop">
-          <h2 class="todaTitle">Toda</h2>
-          <p class="todaInfo">
-            Toda, an exciting new app that makes fashion more sustainable by
-            allowing you to share your special clothing with friends. Upload a
-            photo of your item, add a description and choose who can see and
-            borrow it.
-          </p>
-        </div>
-        <div class="infoBottom">
-          <div class="problem">
-            <p class="bottomtitle">Problem:</p>
-            <p class="bottominfo">
-              In a world of fast fashion, we buy expensive outfits for special
-              events but only wear them once. We love having something new for
-              each occasion, yet we hang onto clothes we’re attached to but
-              don’t really wear anymore.
-            </p>
-          </div>
-          <div class="solution">
-            <p class="bottomtitle">Solution:</p>
-            <p class="bottominfo">
-              Instead of buying new outfits you'll only wear once, you can
-              easily share your existing clothing with friends through Toda.
-              This way, you keep your wardrobe fresh, reduce waste, and make
-              fashion more sustainable.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="video">
-        <img src="./asset/Screenshot 2024-09-24 at 11.33.29.png" alt="" />
-      </div>
-    </div> -->
-
-    <div class="assignment">
-      <!-- <div class="scrollimage">
-        <img src="./asset/branding.png" alt="branding" />
-      </div> -->
-      <div class="assInfo">
-        <h2 class="assTitle">Assignment</h2>
-        <p class="assText">
-          The assignment was given by Thomas More. We were individually asked to
-          create an application that can help boost sustainability in fashion.
-          <br />
-          <br />
-          In this assignment we were asked to do our research on sustainable
-          fashion, create a solution based up on the research. We had to design
-          a landingspage and the application. Further we were asked to make
-          paflets and a selling pitch.
-        </p>
-      </div>
-    </div>
+    <section class="visBoardScreensMobile">
+  <div class="carousel">
+    <button class="arrow left">&#10094;</button>
+    <img id="carouselImage" src="./asset/TI1.png" alt="screen" />
+    <button class="arrow right">&#10095;</button>
+  </div>
+</section>
 
    <footer id="contactSection">
       <h2 class="contactTitle">Let's connect</h1>
@@ -153,73 +103,86 @@
       </div>
     </footer>
      <script>
-      const hamburger = document.getElementById("hamburger");
-      const navMobile = document.getElementById("navMobile");
+  document.addEventListener("DOMContentLoaded", function () {
+  
+    const hamburger = document.getElementById("hamburger");
+    const navMobile = document.getElementById("navMobile");
 
-      hamburger.addEventListener("click", function () {
-        hamburger.classList.toggle("active");
-        navMobile.classList.toggle("show");
-      });
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("active");
+      navMobile.classList.toggle("show");
+    });
 
-      const bgVideo = document.getElementById("introVideo");
-      bgVideo.addEventListener("ended", function () {
-        bgVideo.currentTime = 0; // Reset the video to the start
-        bgVideo.play(); // Play the video again
-      });
+    const aboutLink = document.querySelector(".about");
+    const aboutDeskLink = document.querySelector(".aboutDesk");
+    const projectLink = document.querySelector(".project");
+    const projectDeskLink = document.querySelector(".projectDesk");
+    const contactLink = document.querySelector(".contact");
+    const contactDeskLink = document.querySelector(".contactDesk");
 
+    const aboutSection = document.querySelector("#aboutMe");
+    const projectSection = document.querySelector("#todaDiv");
+    const contactSection = document.querySelector("#contactSection");
 
-      document.addEventListener("DOMContentLoaded", function () {
-        // Selecting the links
-        const aboutLink = document.querySelector(".about");
-        const aboutDeskLink = document.querySelector(".aboutDesk");
-        const projectLink = document.querySelector(".project");
-        const projectDeskLink = document.querySelector(".projectDesk");
-        const contactLink = document.querySelector(".contact");
-        const contactDeskLink = document.querySelector(".contactDesk");
+    function hideMenu() {
+      navMobile.classList.remove("show");
+      hamburger.classList.remove("active");
+    }
 
-        // Selecting the sections
-        const aboutSection = document.querySelector("#aboutMe");
-        const projectSection = document.querySelector("#todaDiv");
-        const contactSection = document.querySelector("#contactSection");
+    aboutLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+      hideMenu();
+    });
 
-        function hideMenu() {
-          navMobile.classList.remove("show");
-          hamburger.classList.remove("active");
-        }
-        // Event listeners for smooth scrolling to sections
-        aboutLink.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
-          aboutSection.scrollIntoView({ behavior: "smooth" });
-          hideMenu();
-        });
+    aboutDeskLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    });
 
-        aboutDeskLink.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
-          aboutSection.scrollIntoView({ behavior: "smooth" });
-        });
+    projectLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      projectSection.scrollIntoView({ behavior: "smooth" });
+      hideMenu();
+    });
 
-        projectLink.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
-          projectSection.scrollIntoView({ behavior: "smooth" });
-          hideMenu();
-        });
+    projectDeskLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      projectSection.scrollIntoView({ behavior: "smooth" });
+    });
 
-        projectDeskLink.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
-          projectSection.scrollIntoView({ behavior: "smooth" });
-        });
+    contactLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      contactSection.scrollIntoView({ behavior: "smooth" });
+      hideMenu();
+    });
 
-        contactLink.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
-          contactSection.scrollIntoView({ behavior: "smooth" });
-          hideMenu();
-        });
+    contactDeskLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    });
 
-        contactDeskLink.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent default link behavior
-          contactSection.scrollIntoView({ behavior: "smooth" });
-        });
-      });
-    </script>
+    const images = ["./asset/TI1.png", "./asset/TI2.png", "./asset/TI3.png"];
+  let currentIndex = 0;
+
+  const carouselImage = document.getElementById("carouselImage");
+  const leftBtn = document.querySelector(".arrow.left");
+  const rightBtn = document.querySelector(".arrow.right");
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  leftBtn.addEventListener("click", function () {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  rightBtn.addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+  });
+</script>
   </body>
 </html>

@@ -22,7 +22,8 @@ main {
 }
 
 header,
-.headerProjects {
+.headerProjects,
+.headerProjectsToda {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -336,6 +337,101 @@ a[href^="tel"] {
   color: white;
 }
 
+/* Toda pagina */
+.prPageTitle {
+  font-size: 1.8em;
+  align-self: center;
+  width: 80%;
+  text-align: center;
+  color: #ebe9df;
+  padding-top: 20px;
+}
+
+.headerProjectsToda {
+  height: auto;
+}
+
+#prPageTitle {
+  margin: 0 auto 50px auto;
+  display: block;
+  width: 90%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.summaryTitle {
+  font-size: 1.8em;
+  color: #ebbb2a;
+  margin-top: 125px;
+  text-align: center;
+}
+.projectContainerOne {
+  margin: 0 20px;
+}
+
+.briefTitle,
+.solutionTitle,
+.skillTitle {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.briefText,
+.solutionText,
+.skillText {
+  font-size: 0.9em;
+  margin-bottom: 50px;
+}
+
+.visBoardScreensDesk,
+.visBoardImage {
+  display: none;
+}
+
+.visBoardScreensMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 50px 0;
+  background-color: #ebbb2a;
+}
+
+.carousel {
+  width: 80%;
+  max-width: 200px;
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: #ebbb2a;
+  color: #030f00;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.arrow.left {
+  left: -40px;
+}
+
+.arrow.right {
+  right: -40px;
+}
+
 @media (min-width: 900px) {
   body {
     padding: 20px 40px;
@@ -553,10 +649,15 @@ a[href^="tel"] {
     font-size: 1em;
   }
 
-  .visBoardScreens {
+  .visBoardScreensDesk {
+    display: flex;
     background-color: #ebbb2a;
     height: 100vh;
     margin: 0px -40px;
+  }
+
+  .visBoardScreensMobile {
+    display: none;
   }
 
   .visBoardImage {
@@ -571,7 +672,7 @@ a[href^="tel"] {
   .visBoardImage img {
     width: 20%;
     height: auto;
-    border-radius: 30px;
+    border-radius: 15px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
   }
 }
