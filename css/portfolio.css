@@ -14,6 +14,11 @@ body {
   background-color: #030f00;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 main {
   margin-bottom: -70px;
   display: flex;
@@ -164,6 +169,8 @@ header,
 footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
@@ -205,7 +212,7 @@ section {
   }
 }
 
-.projects {
+.indexProjects {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -221,53 +228,35 @@ section {
   height: 250px;
 }
 
-#videoToda {
-  width: 100%;
-  object-fit: cover;
-  max-width: 300px;
-  height: auto;
-  margin: auto;
-  display: block;
-  padding: 5px 40px;
-}
-
-.tittleToda {
-  background-color: #ebe9df;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  justify-self: center;
-  align-self: end;
-  padding: 100px 0px;
-}
-
-.tittleToda img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  display: block;
-  padding: 40px;
-}
-.projectToda a {
+.indexProjectCard {
   margin: 0;
   padding: 0;
   width: 100%;
 }
-.projectTodaInfo {
+
+.indexProjectLink img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.indexProjectLink {
   text-decoration: none;
-  color: #ebe9df;
+  color: #fd06ab;
+}
+.indexProjectLink:hover {
+  color: #06fd06;
 }
 
-.projectTodaTittle {
-  font-size: 1.1em;
-  margin-top: -40px;
-  padding-top: 50px;
+.indexProjectTitle {
+  font-size: 1.3em;
+  margin-top: 8px;
 }
 
-.projectTodaSubTittle {
+.indexProjectSubtitle {
   font-size: 0.8em;
-  margin-top: -55px;
-  padding-top: 50px;
+  margin: -12px 0 24px 0;
 }
 
 .picOfMe img {
@@ -309,6 +298,11 @@ section {
   font-size: 7vw;
   padding-top: 0px;
 }
+
+.mail :hover {
+  color: #06fd06;
+}
+
 .contactInfo {
   display: flex;
   flex-direction: column;
@@ -373,7 +367,11 @@ a[href^="tel"] {
 
 .briefTitle,
 .solutionTitle,
-.skillTitle {
+.skillTitle,
+.fontSecTitle,
+.todaMoodboardTitle,
+.todaMockUpTitle,
+.todaMoreProjectsTitle {
   font-size: 1.2em;
   font-weight: 700;
 }
@@ -394,7 +392,7 @@ a[href^="tel"] {
   justify-content: center;
   align-items: center;
   height: 90vh;
-  margin: 50px 0;
+  margin-top: 50px;
   background-color: #ebbb2a;
 }
 
@@ -430,6 +428,242 @@ a[href^="tel"] {
 
 .arrow.right {
   right: -40px;
+}
+
+.projectContainerTwo {
+  margin: 20px;
+}
+
+.logoImage img {
+  width: 100%;
+  height: auto;
+  max-width: 550px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.visBoardColContainer {
+  background-color: #ebbb2a;
+  padding: 40px 20px;
+  margin-top: 100px;
+}
+.visBoardCol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.colSecTitle {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ebe9df;
+  margin-bottom: 5px;
+}
+
+.coltitle {
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #030f00;
+}
+
+.hex {
+  font-size: 0.7em;
+  color: #17160f;
+}
+
+.yellow,
+.green,
+.black,
+.white {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colYel,
+.colGre,
+.colWhi,
+.colBla {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.colGre {
+  background-color: #002f2f;
+}
+
+.colBla {
+  background-color: #17160f;
+}
+.colWhi {
+  background-color: #fafaf8;
+}
+
+.fontsection {
+  padding: 50px 20px 20px 20px;
+}
+
+.Modak {
+  font-family: "Modak";
+  font-size: 2em;
+  margin-top: 50px;
+}
+
+.Poppins {
+  font-family: "Poppins";
+  font-size: 1.2em;
+}
+
+.fontExample {
+  display: none;
+}
+
+.todaDesignSystem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px 100px;
+  gap: 20px;
+}
+
+.todaFavIconTitle,
+.todaButtonStateTitle {
+  align-self: flex-start;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 600;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.todaHeart,
+.todaButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 75px auto;
+}
+
+.todaButton {
+  width: 160px;
+  padding: 10px 20px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #ebbb2a;
+  color: #011638;
+  border: none;
+}
+
+.todaButton:hover {
+  background-color: #dfba3e;
+  color: #030f00;
+  cursor: pointer;
+}
+
+.todaButton:active {
+  background-color: #ebbb2a;
+  padding: 10px 10px;
+  color: #030f00;
+}
+
+.todaMoodboardImages img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.todaMoodboard {
+  background-color: #ebbb2a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.todaMoodboardImages {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 40px 0px;
+}
+
+.todaMoodboardTitle,
+.todaMockUpTitle,
+.todaMoreProjectsTitle {
+  align-self: flex-start;
+}
+
+.todaMoodboardHide {
+  display: none;
+}
+
+.todaMockUp {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.todaMockUpImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  gap: 20px;
+}
+
+.todaMockUpImage img {
+  width: 100%;
+  max-width: 100vh;
+  height: auto;
+  margin: auto;
+}
+
+/* -------- MoreProject.js-------- */
+
+.todaMoreProjects {
+  display: none;
+}
+
+.todaMoreProjectsButton {
+  display: block;
+  width: 70%;
+  max-width: 175px;
+  margin: auto;
+  padding: 10px;
+  background-color: #fd06ab;
+  color: #ebe9df;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  margin: 50px auto;
+}
+
+.todaMoreProjectsButton:hover {
+  background-color: #06fd06;
+  color: #030f00;
+  cursor: pointer;
 }
 
 @media (min-width: 900px) {
@@ -472,15 +706,16 @@ a[href^="tel"] {
   .projectDesk:hover,
   .contactDesk:hover {
     font-weight: 700;
+    color: #06fd06;
   }
 
-  .tittleToda img {
+  .indexProjectLink img {
     max-width: 100%;
     filter: brightness(50%);
     transition: filter 0.3s ease;
   }
 
-  .tittleToda:hover img {
+  .indexProjectLink:hover img {
     filter: brightness(100%);
   }
 
@@ -499,7 +734,7 @@ a[href^="tel"] {
     display: none;
   }
 
-  .projects {
+  .indexProjects {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 99%;
@@ -516,18 +751,7 @@ a[href^="tel"] {
     overflow: hidden;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
-  .tittleToda {
-    max-width: 100%;
-  }
-  .tittleToda img {
-    max-width: 100%;
-    filter: brightness(50%);
-    transition: filter 0.3s ease;
-  }
 
-  .tittleToda:hover img {
-    filter: brightness(100%);
-  }
   .projectTodaTittle {
     font-size: 1.5em;
     color: var(--fontcol);
@@ -577,7 +801,7 @@ a[href^="tel"] {
 
   .contactTitle {
     font-size: 3em;
-    margin: -5px;
+    margin: auto;
     align-self: center;
     padding-bottom: 50px;
   }
@@ -608,7 +832,7 @@ a[href^="tel"] {
   }
   .projectContainerOne {
     display: flex;
-    padding: 200px 100px 200px 100px;
+    padding: 200px 100px;
   }
 
   .summaryTitle {
@@ -620,9 +844,20 @@ a[href^="tel"] {
 
   .briefTitle,
   .solutionTitle,
-  .skillTitle {
+  .skillTitle,
+  .colSecTitle,
+  .fontSecTitle,
+  .todaFavIconTitle,
+  .todaButtonStateTitle,
+  .todaMoodboardTitle,
+  .todaMockUpTitle,
+  .todaMoreProjectsTitle {
     font-size: 2em;
     font-weight: 400;
+  }
+
+  .todaMockUp {
+    padding: 0 100px 200px 100px;
   }
 
   .sumContainer {
@@ -674,5 +909,225 @@ a[href^="tel"] {
     height: auto;
     border-radius: 15px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .projectContainerTwo {
+    margin: 50px 100px 0 100px;
+  }
+  .sumContainerTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: top;
+    align-items: top;
+    gap: 20px;
+  }
+  .logoImage img {
+    width: auto;
+    height: 70vh;
+    margin: auto;
+    border-radius: 20px;
+  }
+  .visBoardCol {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 800px;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 50px;
+  }
+
+  .colSecTitle,
+  .todaMoodboardTitle {
+    padding: 0px 0px 0px 120px;
+    color: #17160f;
+  }
+
+  .fontSecTitle {
+    color: #ebe9df;
+    padding-left: 45px;
+  }
+
+  .fontSecFlex {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .fontContainer {
+    width: 90%;
+  }
+
+  .fontExample {
+    display: block;
+    width: 80%;
+    height: 100%;
+    height: auto;
+    margin: auto;
+    padding: 40px;
+    background-color: #fafaf8;
+    border-radius: 20px;
+  }
+
+  .titleExample {
+    font-size: 48px;
+    font-family: "Modak";
+    color: #030f00;
+    margin-bottom: 20px;
+  }
+
+  .headerTwoExample {
+    font-size: 32px;
+    font-family: "poppins";
+    color: #030f00;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  .headerThreeExample {
+    font-size: 20px;
+    font-family: "poppins";
+    color: #030f00;
+    margin-bottom: 10px;
+    font-weight: 500;
+    width: 70%;
+  }
+
+  .bodyExample {
+    font-size: 14px;
+    font-family: "poppins";
+    color: #030f00;
+    margin-bottom: 10px;
+    font-weight: 400;
+    width: 100%;
+  }
+
+  .Modak,
+  .Poppins {
+    margin-top: 0px;
+    font-family: "Raleway";
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+  .fontContainer p {
+    font-size: 0.9em;
+  }
+
+  .fontContainer {
+    padding: 40px;
+  }
+
+  .fontsection {
+    padding: 20px 100px 100px 100px;
+    margin: 0px -40px;
+  }
+
+  .visBoardColContainer {
+    margin: 100px -40px;
+  }
+  .todaDesignSystem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .todaHeart,
+  .todaButton {
+    margin: 100px auto;
+  }
+
+  .todaMoodboard {
+    margin: 100px -40px;
+  }
+
+  .todaMoodboardHide {
+    display: block;
+  }
+
+  .todaMoodboardImages {
+    margin: 62px 0 62px -5px;
+    gap: 32px;
+  }
+
+  .todaMoodboardImages img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* -------- footer.html-------- */
+  footer {
+    height: 100vh;
+  }
+
+  #contactSection .mail:hover {
+    color: #06fd06;
+  }
+
+  /* -------- MoreProject.js-------- */
+
+  .todaMoreProjectsButton {
+    display: none;
+  }
+
+  .todaMoreProjects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    height: 100vh;
+  }
+
+  .moreProjects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .projectImg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  .projectCard {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    width: 100%;
+    transition: transform 0.2s;
+  }
+
+  .projectCardLink {
+    text-decoration: none;
+    color: #fd06ab;
+  }
+  .projectCardLink:hover {
+    color: #06fd06;
+  }
+
+  .projectTitle {
+    font-size: 1.7em;
+    font-weight: 600;
+    margin: 16px 0 -8px 0;
+  }
+
+  .indexProjectTitle {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    margin: 16px 0 24px 0;
+  }
+
+  .indexProjectSubtitle {
+    font-size: 1em;
+    text-align: center;
   }
 }
